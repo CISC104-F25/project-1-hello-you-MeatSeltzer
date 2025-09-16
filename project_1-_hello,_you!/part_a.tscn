@@ -1,40 +1,118 @@
-[gd_scene load_steps=16 format=3 uid="uid://clwrsdsnmy3md"]
+[gd_scene load_steps=35 format=3 uid="uid://clwrsdsnmy3md"]
+
+[ext_resource type="PackedScene" uid="uid://4sy4oeoj170" path="res://part_b.tscn" id="1_ys316"]
+[ext_resource type="PackedScene" uid="uid://clhttn3a0ep70" path="res://part_c.tscn" id="2_to4tk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_to4tk"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_0jsbj"]
+sky_material = SubResource("ProceduralSkyMaterial_to4tk")
+
+[sub_resource type="Environment" id="Environment_q6bo7"]
+background_mode = 2
+sky = SubResource("Sky_0jsbj")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m6jki"]
+albedo_color = Color(0.282353, 0.662745, 0.65098, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m6jki"]
+material = SubResource("StandardMaterial3D_m6jki")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ys316"]
-albedo_color = Color(0.21448, 0.1344, 0.28, 1)
+albedo_color = Color(0.282353, 0.662745, 0.65098, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_to4tk"]
+albedo_color = Color(0.678431, 0.541176, 0.392157, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_m6jki"]
+material = SubResource("StandardMaterial3D_to4tk")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jsbj"]
+albedo_color = Color(0.678431, 0.541176, 0.392157, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ys316"]
+material = SubResource("StandardMaterial3D_0jsbj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6bo7"]
+albedo_color = Color(0.678431, 0.541176, 0.392157, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_m6jki"]
+material = SubResource("StandardMaterial3D_q6bo7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eso0h"]
+albedo_color = Color(0.678431, 0.541176, 0.392157, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_to4tk"]
+material = SubResource("StandardMaterial3D_eso0h")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_trumw"]
+albedo_color = Color(0.678431, 0.541176, 0.392157, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_0jsbj"]
+material = SubResource("StandardMaterial3D_trumw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7awo"]
+albedo_color = Color(0.678431, 0.541176, 0.392157, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_q6bo7"]
+material = SubResource("StandardMaterial3D_e7awo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j0tu7"]
+albedo_color = Color(0.678431, 0.541176, 0.392157, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_eso0h"]
+material = SubResource("StandardMaterial3D_j0tu7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xb3d"]
+albedo_color = Color(0.678431, 0.541176, 0.392157, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_trumw"]
+material = SubResource("StandardMaterial3D_3xb3d")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_grw75"]
+albedo_color = Color(0.145098, 0.141176, 0.133333, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_m6jki"]
+material = SubResource("StandardMaterial3D_grw75")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0j4pn"]
+albedo_color = Color(0.678431, 0.541176, 0.392157, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_q6bo7"]
+material = SubResource("StandardMaterial3D_0j4pn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uojgb"]
+albedo_color = Color(0.678431, 0.541176, 0.392157, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_e7awo"]
+material = SubResource("StandardMaterial3D_uojgb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_narcd"]
+albedo_color = Color(0.521569, 0.376471, 0.517647, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_j0tu7"]
+material = SubResource("StandardMaterial3D_narcd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xr1d8"]
+albedo_color = Color(0.329412, 0.0313726, 0.0156863, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_3xb3d"]
+material = SubResource("StandardMaterial3D_xr1d8")
 
 [node name="Part_A" type="Node3D"]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_q6bo7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
 [node name="Grass" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.952, 0, 0, 0, 1.475, 0, 0, 0, 3.909, 0, 0, 0)
+transform = Transform3D(18.0368, 0, 0, 0, 1.49777, 0, 0, 0, 17.7912, 0, 0, 0)
 mesh = SubResource("PlaneMesh_m6jki")
 surface_material_override/0 = SubResource("StandardMaterial3D_ys316")
 
@@ -80,17 +158,17 @@ transform = Transform3D(1.28, 0, 0, 0, 0.2, 0, 0, 0, 1.28, 0, 1.06821, 0)
 mesh = SubResource("BoxMesh_ys316")
 skeleton = NodePath("../..")
 
-[node name="Pillar4" type="MeshInstance3D" parent="."]
+[node name="BrokenPillar" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.5, 0, 0, 0, 0.25, 0.75, 0.58, -1)
 mesh = SubResource("CylinderMesh_m6jki")
 
-[node name="PillarBase2" type="MeshInstance3D" parent="Pillar4"]
+[node name="PillarBase2" type="MeshInstance3D" parent="BrokenPillar"]
 transform = Transform3D(1.28, 0, 0, 0, 0.2, 0, 0, 0, 1.28, 0, -1.101, 0)
 mesh = SubResource("BoxMesh_ys316")
 skeleton = NodePath("../PillarBase")
 
-[node name="PillarBase" type="MeshInstance3D" parent="Pillar4"]
-transform = Transform3D(0.456625, 0.0699918, 1.10871, 0, 0.185437, -0.479496, -1.19578, 0.0267273, 0.423375, 1.12981, -0.846006, 0)
+[node name="PillarBase" type="MeshInstance3D" parent="BrokenPillar"]
+transform = Transform3D(0.456625, 0.0699918, 1.10871, 0, 0.185437, -0.479496, -1.19578, 0.0267273, 0.423375, 1.12981, -0.655193, 0)
 mesh = SubResource("BoxMesh_m6jki")
 skeleton = NodePath("../..")
 
@@ -116,7 +194,7 @@ mesh = SubResource("CylinderMesh_q6bo7")
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.354084, 0.125)
 mesh = SubResource("BoxMesh_eso0h")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Altar"]
+[node name="AltarTop" type="MeshInstance3D" parent="Altar"]
 transform = Transform3D(1.06066, 0, 1.06066, 0, 0.255, 0, -1.06066, 0, 1.06066, 0, 0.499181, 0)
 mesh = SubResource("BoxMesh_trumw")
 
@@ -145,7 +223,7 @@ transform = Transform3D(0.053033, 0, 0.053033, 0, 15, 0, -0.424264, 0, 0.424264,
 mesh = SubResource("BoxMesh_e7awo")
 
 [node name="Bush" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.82535, 0.0898774, 1.58766)
+transform = Transform3D(0.222149, 0, -0.459567, 0, 0.348544, 0, 0.439494, 0, 0.232295, 1.34768, 0.0118635, 1.58766)
 mesh = SubResource("SphereMesh_j0tu7")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Bush"]
@@ -164,7 +242,7 @@ mesh = SubResource("SphereMesh_j0tu7")
 skeleton = NodePath("../..")
 
 [node name="Tree" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.142913, 0.119159, 0.202859, -0.0187947, 0.957496, -0.049842, -0.204261, -0.171473, -0.137346, 1.82535, 0.695328, -1.6816)
+transform = Transform3D(0.208263, 0.238046, 0.218662, -0.0231551, 1.18124, -0.0614053, -0.225731, 0.0984558, 0.20804, 3.39024, 1.00454, -1.68857)
 mesh = SubResource("CylinderMesh_3xb3d")
 skeleton = NodePath("../Bush")
 
@@ -211,3 +289,12 @@ skeleton = NodePath("../..")
 transform = Transform3D(-0.0659748, -0.109276, -1.52148, 0, 0.779341, -0.214327, 0.967754, -0.00744966, -0.103724, 0.0679021, -0.05, 0.0336882)
 mesh = SubResource("SphereMesh_j0tu7")
 skeleton = NodePath("../..")
+
+[node name="Part_B" parent="." instance=ExtResource("1_ys316")]
+transform = Transform3D(-0.125, 1.09278e-08, 0, -1.09278e-08, -0.125, 0, 0, 0, 0.125, -0.0141485, 1.07357, 0.125634)
+
+[node name="Part_C" parent="." instance=ExtResource("2_to4tk")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.985118, -0.171877, 0, 0.171877, 0.985118, 0.14262, 0.286238, 3.53502)
+fov = 71.1

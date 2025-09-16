@@ -1,19 +1,59 @@
-[gd_scene format=3 uid="uid://clhttn3a0ep70"]
+[gd_scene load_steps=5 format=3 uid="uid://clhttn3a0ep70"]
+
+[ext_resource type="Texture2D" uid="uid://d3cmjtfawxf61" path="res://icon.svg" id="1_e15qq"]
+[ext_resource type="Texture2D" uid="uid://ni4ldun4lia1" path="res://brosaid.png" id="2_tlj50"]
+[ext_resource type="Texture2D" uid="uid://m016stk6jh26" path="res://blank-white-7sn5o1woonmklx1h.jpg" id="3_6neb6"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ml436"]
 
 [node name="Part_C" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -173.0
+offset_top = -17.0
+offset_right = -173.0
+offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.64939, 0.659079)
 
-[node name="PlaceholderLabel" type="Label" parent="."]
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 656.0
-theme_override_font_sizes/font_size = 20
-text = "Add more labels, images, and other Control nodes to this scene to build your personal poster for Part C.
+offset_left = 373.0
+offset_top = 15.0
+offset_right = 678.0
+offset_bottom = 84.0
+theme_override_font_sizes/font_size = 50
+text = "Noah Mason"
 
-Remember that you may need to scroll down to \"Theme Overrides > Font Sizes\" in the Inspector 
-to make your labels big enough to read. (This is font size 20px, for reference)."
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(0, 0, 0, 1)
+material = SubResource("CanvasItemMaterial_ml436")
+layout_mode = 0
+offset_left = 273.0
+offset_top = 63.0
+offset_right = 799.0
+offset_bottom = 245.0
+text = "I played lots of turn-based RPGs as a kid and I feel there aren't as many nowadays, especially not as many with unique mechanics. I have an idea for a turn-based combat system that uses attack combos and has a timer similar to Chrono Trigger. This class' final might be a good opportunity to prototype the idea, and I'm excited for the opportunity."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(537, 85)
+scale = Vector2(4.32813, 0.0761719)
+texture = ExtResource("1_e15qq")
+
+[node name="Brosaid" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(533, 301)
+scale = Vector2(0.80147, 0.504496)
+texture = ExtResource("2_tlj50")
+
+[node name="Blank-white-7Sn5o1Woonmklx1h" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(533, 160)
+scale = Vector2(0.282292, 0.242994)
+texture = ExtResource("3_6neb6")

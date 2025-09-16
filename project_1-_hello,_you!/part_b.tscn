@@ -1,8 +1,100 @@
-[gd_scene load_steps=2 format=3 uid="uid://4sy4oeoj170"]
+[gd_scene load_steps=17 format=3 uid="uid://4sy4oeoj170"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vq3a5"]
+albedo_color = Color(0.945098, 0.356863, 0.709804, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_vq3a5"]
+material = SubResource("StandardMaterial3D_vq3a5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gn0ur"]
+albedo_color = Color(0.945098, 0.356863, 0.709804, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_u6u1k"]
+material = SubResource("StandardMaterial3D_gn0ur")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsn63"]
+albedo_color = Color(0.129412, 0.513726, 0.501961, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_id878"]
+material = SubResource("StandardMaterial3D_nsn63")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3sstj"]
+albedo_color = Color(0.129412, 0.513726, 0.501961, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_y244p"]
+material = SubResource("StandardMaterial3D_3sstj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2i18j"]
+albedo_color = Color(0.156863, 0.14902, 0.172549, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3a1t7"]
+material = SubResource("StandardMaterial3D_2i18j")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cm7y8"]
+albedo_color = Color(0.129412, 0.513726, 0.501961, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hvux6"]
+material = SubResource("StandardMaterial3D_cm7y8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wstyt"]
+albedo_color = Color(0.98, 0.24108, 0.1274, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_rx4g3"]
+material = SubResource("StandardMaterial3D_wstyt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q10ca"]
+albedo_color = Color(0.129412, 0.513726, 0.501961, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tene2"]
+material = SubResource("StandardMaterial3D_q10ca")
 
 [node name="Part_B" type="Node3D"]
 
-[node name="PlaceholderCube" type="MeshInstance3D" parent="."]
+[node name="Blade" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 3, 0, 0, 0, 0.025, 0, 3.5566, 0)
 mesh = SubResource("BoxMesh_vq3a5")
+
+[node name="BladePoint" type="MeshInstance3D" parent="Blade"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("PrismMesh_u6u1k")
+
+[node name="CrossGuard" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, -4.37114e-08, -0.125, 0, 1, -5.46392e-09, 0, 2.02684, 0)
+mesh = SubResource("PrismMesh_id878")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CrossGuard"]
+transform = Transform3D(-4.37114e-08, 2, -1.09278e-08, -0.5, -4.37114e-08, 5.46392e-09, 1.74846e-07, 3.49691e-07, 1, 0, 0, 0)
+mesh = SubResource("PrismMesh_id878")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="CrossGuard"]
+transform = Transform3D(-1, -1.74846e-07, 9.55343e-16, 4.37114e-08, -1, 1.09278e-08, -1.52855e-14, 6.99382e-07, 1, 0, 0, 0)
+mesh = SubResource("PrismMesh_id878")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="CrossGuard"]
+transform = Transform3D(1.19249e-08, -2, 1.09278e-08, 0.5, 1.19249e-08, 5.46392e-09, -1.74846e-07, 3.49691e-07, 1, 0, 0, 0)
+mesh = SubResource("PrismMesh_id878")
+skeleton = NodePath("../..")
+
+[node name="Ricasso" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.335, 0, 0, 0, 1, 0, 0, 0, 0.125, 0, 2.5, 0)
+mesh = SubResource("PrismMesh_y244p")
+
+[node name="Hilt" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.5, 0, 0, 0, 0.125, 0, 1.50938, 0)
+mesh = SubResource("CylinderMesh_3a1t7")
+
+[node name="Pommel" type="MeshInstance3D" parent="Hilt"]
+transform = Transform3D(1.8, 0, 0, 0, -6.55671e-09, -0.9, 0, 0.6, -1.57361e-07, 0, -1.1446, 0)
+mesh = SubResource("CylinderMesh_hvux6")
+skeleton = NodePath("../..")
+
+[node name="PommelGem" type="MeshInstance3D" parent="Hilt/Pommel"]
+transform = Transform3D(0.71, 0, 0, 0, 4.257, -5.40519e-16, 0, 3.24083e-15, 0.71, 0, 0, 0)
+mesh = SubResource("SphereMesh_rx4g3")
+
+[node name="Button" type="MeshInstance3D" parent="Hilt"]
+transform = Transform3D(0.5, 0, 0, 0, 0.25, 0, 0, 0, 1, 0, -1.47554, 0)
+mesh = SubResource("CylinderMesh_tene2")
+skeleton = NodePath("../..")
