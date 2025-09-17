@@ -223,7 +223,7 @@ transform = Transform3D(0.053033, 0, 0.053033, 0, 15, 0, -0.424264, 0, 0.424264,
 mesh = SubResource("BoxMesh_e7awo")
 
 [node name="Bush" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.222149, 0, -0.459567, 0, 0.348544, 0, 0.439494, 0, 0.232295, 1.34768, 0.0118635, 1.58766)
+transform = Transform3D(0.34916, 0, -0.722899, 0, 0.549, 0, 0.69077, 0, 0.3654, -3.79425, 0.0118635, -2.60423)
 mesh = SubResource("SphereMesh_j0tu7")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Bush"]
@@ -242,7 +242,7 @@ mesh = SubResource("SphereMesh_j0tu7")
 skeleton = NodePath("../..")
 
 [node name="Tree" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.208263, 0.238046, 0.218662, -0.0231551, 1.18124, -0.0614053, -0.225731, 0.0984558, 0.20804, 3.39024, 1.00454, -1.68857)
+transform = Transform3D(0.208263, 0.238046, 0.218662, -0.0231551, 1.18124, -0.0614053, -0.225731, 0.0984558, 0.20804, 0.170991, 1.00454, -1.69865)
 mesh = SubResource("CylinderMesh_3xb3d")
 skeleton = NodePath("../Bush")
 
@@ -272,7 +272,7 @@ mesh = SubResource("SphereMesh_j0tu7")
 skeleton = NodePath("../../..")
 
 [node name="Bush2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.32747, 0, 0.220881, 0, 0.395, 0, -0.220881, 0, 0.32747, -1.2026, 0.0887663, -1.52425)
+transform = Transform3D(0.32747, 0, 0.220881, 0, 0.395, 0, -0.220881, 0, 0.32747, -2.68089, 0.0887663, 0.856242)
 mesh = SubResource("SphereMesh_j0tu7")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Bush2"]
@@ -296,5 +296,7 @@ transform = Transform3D(-0.125, 1.09278e-08, 0, -1.09278e-08, -0.125, 0, 0, 0, 0
 [node name="Part_C" parent="." instance=ExtResource("2_to4tk")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.985118, -0.171877, 0, 0.171877, 0.985118, 0.14262, 0.286238, 3.53502)
+transform = Transform3D(0.707107, -0.270598, 0.653282, 0, 0.92388, 0.382683, -0.707107, -0.270598, 0.653282, 3.90066, 3.49689, 4.89577)
+projection = 1
 fov = 71.1
+size = 3.25
