@@ -1,49 +1,65 @@
 [gd_scene load_steps=17 format=3 uid="uid://4sy4oeoj170"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vq3a5"]
+diffuse_mode = 3
 albedo_color = Color(0.945098, 0.356863, 0.709804, 1)
+roughness = 0.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_vq3a5"]
 material = SubResource("StandardMaterial3D_vq3a5")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gn0ur"]
+diffuse_mode = 3
 albedo_color = Color(0.945098, 0.356863, 0.709804, 1)
+roughness = 0.0
 
 [sub_resource type="PrismMesh" id="PrismMesh_u6u1k"]
 material = SubResource("StandardMaterial3D_gn0ur")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsn63"]
+diffuse_mode = 3
 albedo_color = Color(0.129412, 0.513726, 0.501961, 1)
+roughness = 0.0
 
 [sub_resource type="PrismMesh" id="PrismMesh_id878"]
 material = SubResource("StandardMaterial3D_nsn63")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3sstj"]
+diffuse_mode = 3
 albedo_color = Color(0.129412, 0.513726, 0.501961, 1)
+roughness = 0.0
 
 [sub_resource type="PrismMesh" id="PrismMesh_y244p"]
 material = SubResource("StandardMaterial3D_3sstj")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2i18j"]
+diffuse_mode = 3
 albedo_color = Color(0.156863, 0.14902, 0.172549, 1)
+roughness = 0.0
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_3a1t7"]
 material = SubResource("StandardMaterial3D_2i18j")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cm7y8"]
+diffuse_mode = 3
 albedo_color = Color(0.129412, 0.513726, 0.501961, 1)
+roughness = 0.0
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_hvux6"]
 material = SubResource("StandardMaterial3D_cm7y8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wstyt"]
+diffuse_mode = 3
 albedo_color = Color(0.98, 0.24108, 0.1274, 1)
+roughness = 0.0
 
 [sub_resource type="SphereMesh" id="SphereMesh_rx4g3"]
 material = SubResource("StandardMaterial3D_wstyt")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q10ca"]
+diffuse_mode = 3
 albedo_color = Color(0.129412, 0.513726, 0.501961, 1)
+roughness = 0.0
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_tene2"]
 material = SubResource("StandardMaterial3D_q10ca")
