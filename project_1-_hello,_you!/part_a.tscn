@@ -1,8 +1,9 @@
-[gd_scene load_steps=38 format=3 uid="uid://clwrsdsnmy3md"]
+[gd_scene load_steps=39 format=3 uid="uid://clwrsdsnmy3md"]
 
 [ext_resource type="PackedScene" uid="uid://4sy4oeoj170" path="res://part_b.tscn" id="1_ys316"]
 [ext_resource type="Shader" uid="uid://b2ot7hout1gk8" path="res://outline.gdshader" id="2_0jsbj"]
 [ext_resource type="PackedScene" uid="uid://clhttn3a0ep70" path="res://part_c.tscn" id="2_to4tk"]
+[ext_resource type="Script" uid="uid://dxx8g1scofjgf" path="res://part_c.gd" id="4_q6bo7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_to4tk"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -372,8 +373,13 @@ fov = 71.1
 size = 3.25
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Camera3D"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.014281, 0.0121797, -0.129407)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, -4.76837e-07, 10, -0.07165, -0.0499685, -0.376219)
 mesh = SubResource("QuadMesh_q6bo7")
 surface_material_override/0 = SubResource("ShaderMaterial_eso0h")
 
 [node name="Part_C" parent="." instance=ExtResource("2_to4tk")]
+offset_left = 2.0
+offset_top = -2.0
+offset_right = -565.0
+offset_bottom = -205.0
+script = ExtResource("4_q6bo7")
